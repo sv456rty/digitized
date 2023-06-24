@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useMemo } from "react";
+import { HydrationProvider, Server, Client } from "react-hydration-provider";
 import { MaterialReactTable, type MRT_ColumnDef } from "material-react-table";
 import { data, type Person } from "./makeData";
 
@@ -35,7 +36,15 @@ const Example = () => {
   );
 
   return (
-    <MaterialReactTable columns={columns} data={data} enableColumnOrdering />
+    <HydrationProvider>
+      <Client>
+        <MaterialReactTable
+          columns={columns}
+          data={data}
+          enableColumnOrdering
+        />
+      </Client>
+    </HydrationProvider>
   );
 };
 
