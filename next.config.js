@@ -11,6 +11,7 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     forceSwcTransforms: true,
+    optimizeCss: true,
   },
   modularizeImports: {
     "@mui/material": {
