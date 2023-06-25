@@ -12,7 +12,9 @@ export default function Home() {
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
 
-        <Link href="/thacban">Thác Bản</Link>
+        <Link href="/thacban" prefetch={false}>
+          Thác Bản
+        </Link>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

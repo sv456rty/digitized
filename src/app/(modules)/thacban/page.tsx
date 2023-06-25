@@ -1,6 +1,10 @@
+import dynamic from "next/dynamic";
+
 import { data } from "./makeData";
 
-import Table from "./table";
+const Table = dynamic(() => import("./table"), {
+  loading: () => <p>Loading...</p>,
+});
 
 const Example = () => {
   return <Table data={data} />;
