@@ -6,4 +6,9 @@ const Example = () => {
   return <Table data={data} />;
 };
 
+/*
+const Example = () => {
+  return <div>Hello</div>;
+};
+*/
 export default Example;
